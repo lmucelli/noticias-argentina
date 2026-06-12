@@ -1,0 +1,17 @@
+[
+  {
+    "medio": "Clarín",
+    "titulo": "Título de prueba de Clarín",
+    "url": "https://www.clarin.com/"
+  },
+  {
+    "medio": "La Nación",
+    "titulo": "Título de prueba de La Nación",
+    "url": "https://www.lanacion.com.ar/"
+  },
+  {
+    "medio": "Infobae",
+    "titulo": "Título de prueba de Infobae",
+    "url": "https://www.infobae.com/"
+  }
+]
