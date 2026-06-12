@@ -38,28 +38,33 @@ h1{
 
 <body>
 <script>
-fetch('noticias.json')
-  .then(response => response.json())
-  .then(data => {
+window.onload = function() {
+  fetch('noticias.json')
+    .then(response => response.json())
+    .then(data => {
 
-    let html = '<h2>Noticias cargadas desde JSON</h2><ul>';
+      let html = '<h2>Noticias cargadas desde JSON</h2><ul>';
 
-    data.forEach(noticia => {
-      html += `
-        <li>
-          <strong>${noticia.medio}</strong>:
-          <a href="${noticia.url}" target="_blank">
-            ${noticia.titulo}
-          </a>
-        </li>
-      `;
+      data.forEach(noticia => {
+        html += `
+          <li>
+            <strong>${noticia.medio}</strong>:
+            <a href="${noticia.url}" target="_blank">
+              ${noticia.titulo}
+            </a>
+          </li>
+        `;
+      });
+
+      html += '</ul>';
+
+      document.getElementById('ultimas').innerHTML = html;
+    })
+    .catch(error => {
+      document.getElementById('ultimas').innerHTML =
+        'Error: ' + error;
     });
-
-    html += '</ul>';
-
-    document.getElementById('ultimas').innerHTML = html;
-
-  });
+}
 </script>
 <h1>Últimas noticias</h1>
 <div id="ultimas"></div>
