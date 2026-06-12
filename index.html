@@ -41,11 +41,28 @@ h1{
 fetch('noticias.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+
+    let html = '<h2>Noticias cargadas desde JSON</h2><ul>';
+
+    data.forEach(noticia => {
+      html += `
+        <li>
+          <strong>${noticia.medio}</strong>:
+          <a href="${noticia.url}" target="_blank">
+            ${noticia.titulo}
+          </a>
+        </li>
+      `;
+    });
+
+    html += '</ul>';
+
+    document.getElementById('ultimas').innerHTML = html;
+
   });
 </script>
 <h1>Últimas noticias</h1>
-
+<div id="ultimas"></div>
 <div class="grid">
 
 <div class="columna">
