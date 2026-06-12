@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Noticias Argentina</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noticias Argentina</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.columna{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.columna h2{
+    margin-top:0;
+    text-align:center;
+}
+</style>
 </head>
+
 <body>
-    <h1>Noticias Argentina</h1>
-    <p>Mi agregador de noticias está en construcción.</p>
+
+<h1>Últimas noticias</h1>
+
+<div class="grid">
+
+<div class="columna">
+<h2>Clarín</h2>
+</div>
+
+<div class="columna">
+<h2>La Nación</h2>
+</div>
+
+<div class="columna">
+<h2>Infobae</h2>
+</div>
+
+<div class="columna">
+<h2>Ámbito</h2>
+</div>
+
+<div class="columna">
+<h2>Cronista</h2>
+</div>
+
+<div class="columna">
+<h2>Perfil</h2>
+</div>
+
+</div>
+
 </body>
 </html>
