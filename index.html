@@ -37,7 +37,13 @@ h1{
 </head>
 
 <body>
-
+<script>
+fetch('noticias.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
+</script>
 <h1>Últimas noticias</h1>
 
 <div class="grid">
